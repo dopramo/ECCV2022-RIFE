@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .upload-area {
+    background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+    box-shadow: 
+      20px 20px 60px #d1d9e6,
+      -20px -20px 60px #ffffff;
+  }
+  
+  .upload-area-active {
+    background: linear-gradient(145deg, #e0f2fe, #b3e5fc);
+    box-shadow: 
+      inset 20px 20px 60px #c5d9e6,
+      inset -20px -20px 60px #ffffff;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
